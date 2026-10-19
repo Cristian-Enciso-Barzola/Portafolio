@@ -1,6 +1,6 @@
 .sobre-mi-section {
-  padding: 5rem 5%;
-  background-color: #0b0f19;
+  padding: 6rem 8%;
+  background-color: #0b132b;
   color: #ffffff;
   display: flex;
   justify-content: center;
@@ -25,11 +25,11 @@
 }
 
 .card {
-  background-color: #111a2e;
+  background-color: #1c2541;
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 12px;
   padding: 2.5rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .card-header {
@@ -40,8 +40,8 @@
 }
 
 .icon-box {
-  background-color: rgba(110, 231, 183, 0.1);
-  color: #6ee7b7;
+  background-color: rgba(100, 223, 223, 0.1);
+  color: #64dfdf;
   padding: 0.8rem;
   border-radius: 8px;
   display: flex;
@@ -56,7 +56,7 @@
 }
 
 .card-text {
-  color: #8b95a1;
+  color: #94a3b8;
   line-height: 1.8;
   font-size: 1rem;
   text-align: justify;
@@ -81,8 +81,8 @@
   top: 5px;
   width: 8px;
   height: 8px;
-  background-color: #111a2e;
-  border: 2px solid #6ee7b7;
+  background-color: #1c2541;
+  border: 2px solid #64dfdf;
   border-radius: 50%;
 }
 
@@ -97,13 +97,13 @@
 
 .timeline-header h4 {
   font-size: 1.1rem;
-  color: #6ee7b7;
+  color: #64dfdf;
   font-weight: 600;
 }
 
 .timeline-date {
   font-size: 0.9rem;
-  color: #8b95a1;
+  color: #94a3b8;
 }
 
 .badge {
@@ -115,16 +115,12 @@
 }
 
 .badge-outline {
-  border: 1px solid #6ee7b7;
-  color: #6ee7b7;
+  border: 1px solid #64dfdf;
+  color: #64dfdf;
   background-color: transparent;
 }
 
 @media (max-width: 900px) {
-  .sobre-mi-grid {
-    grid-template-columns: 1fr;
-  }
-  .card {
-    padding: 1.5rem;
-  }
+  .sobre-mi-grid { grid-template-columns: 1fr; }
+  .card { padding: 1.5rem; }
 }

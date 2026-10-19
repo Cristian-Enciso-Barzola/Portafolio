@@ -1,53 +1,48 @@
-/* ESTILOS GENERALES DEL NAVBAR */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 5%;
-  background-color: #0b0f19; /* Fondo oscuro elegante */
-  color: #ffffff;
+  padding: 1.2rem 8%;
+  background: rgba(11, 19, 43, 0.9);
+  backdrop-filter: blur(12px);
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* ESTILOS DEL LOGO */
 .navbar-logo {
-  font-size: 1.8rem;
-  font-weight: 700;
-  cursor: pointer;
-  letter-spacing: 1px;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #ffffff;
 }
 
 .text-cyan {
-  color: #00d8ff; /* Color de acento (Cyan) */
+  color: #64dfdf; /* Color Menta / Ciano Suave */
 }
 
-/* ESTILOS DE LOS ENLACES (DESKTOP) */
 .navbar-links {
   display: flex;
-  gap: 2.5rem;
+  gap: 2rem;
 }
 
 .navbar-links a {
-  color: #a1aab2;
+  color: #94a3b8;
   text-decoration: none;
-  font-size: 1rem;
-  font-weight: 500;
+  font-size: 0.95rem;
+  font-weight: 600;
   transition: color 0.3s ease;
 }
 
 .navbar-links a:hover {
-  color: #ffffff;
+  color: #64dfdf;
 }
 
-/* BOTÓN HAMBURGUESA (Oculto en PC) */
 .navbar-toggle {
   display: none;
   flex-direction: column;
   cursor: pointer;
-  gap: 6px;
+  gap: 5px;
 }
 
 .bar {
@@ -58,28 +53,20 @@
   transition: all 0.3s ease;
 }
 
-/* MEDIA QUERY: VERSIÓN MÓVIL Y TABLET */
 @media (max-width: 768px) {
-  .navbar-toggle {
-    display: flex; /* Mostramos el botón hamburguesa en pantallas chicas */
-  }
-
+  .navbar-toggle { display: flex; }
   .navbar-links {
-    display: none; /* Ocultamos los enlaces horizontales por defecto */
+    display: none;
     flex-direction: column;
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: #0b0f19;
+    background: #0b132b;
     padding: 2rem 0;
     text-align: center;
-    gap: 2rem;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    gap: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
-
-  /* Cuando el estado isOpen es true, se añade la clase "open" */
-  .navbar-links.open {
-    display: flex;
-  }
+  .navbar-links.open { display: flex; }
 }

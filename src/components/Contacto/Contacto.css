@@ -1,6 +1,6 @@
 .contacto-section {
-  padding: 6rem 5%;
-  background-color: #050810;
+  padding: 6rem 8%;
+  background-color: #0b132b;
   color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -26,7 +26,7 @@
 }
 
 .info-desc {
-  color: #8b95a1;
+  color: #94a3b8;
   line-height: 1.6;
   margin-bottom: 2.5rem;
 }
@@ -46,7 +46,7 @@
 .item-label {
   display: block;
   font-size: 0.85rem;
-  color: #8b95a1;
+  color: #94a3b8;
   margin-bottom: 0.2rem;
 }
 
@@ -57,11 +57,11 @@
 }
 
 .contacto-form-wrapper {
-  background-color: #111a2e;
+  background-color: #1c2541;
   padding: 2.5rem;
   border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.05);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .contacto-form {
@@ -78,13 +78,13 @@
 
 .form-group label {
   font-size: 0.9rem;
-  color: #a1aab2;
+  color: #94a3b8;
 }
 
 .form-group input,
 .form-group textarea {
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(11, 19, 43, 0.5);
   border: 1px solid rgba(255, 255, 255, 0.1);
   color: #ffffff;
   padding: 0.8rem 1rem;
@@ -97,13 +97,13 @@
 
 .form-group input:focus,
 .form-group textarea:focus {
-  border-color: #00d8ff;
-  box-shadow: 0 0 0 2px rgba(0, 216, 255, 0.2);
+  border-color: #64dfdf;
+  box-shadow: 0 0 0 2px rgba(100, 223, 223, 0.2);
 }
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-  color: #4b5563;
+  color: #475569;
 }
 
 .form-group textarea {
@@ -111,8 +111,8 @@
 }
 
 .btn-submit {
-  background-color: #00d8ff;
-  color: #050810;
+  background-color: #64dfdf;
+  color: #0b132b;
   border: none;
   padding: 1rem;
   border-radius: 8px;
@@ -124,16 +124,11 @@
 }
 
 .btn-submit:hover {
-  background-color: #00bce6;
+  background-color: #4bc3c3;
   transform: translateY(-2px);
 }
 
 @media (max-width: 768px) {
-  .contacto-grid {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
-  .contacto-form-wrapper {
-    padding: 1.5rem;
-  }
+  .contacto-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .contacto-form-wrapper { padding: 1.5rem; }
 }
