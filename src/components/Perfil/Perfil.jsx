@@ -28,7 +28,7 @@ const Perfil = () => {
             <div className="timeline">
               <div className="timeline-item">
                 <div className="timeline-header">
-                  <h4>Desarrollo de Software</h4>
+                  <h4>Ingenieria de software</h4>
                   <span className="badge badge-outline">En curso</span>
                 </div>
                 <span className="timeline-date">SENATI (Bloque IA 501)</span>

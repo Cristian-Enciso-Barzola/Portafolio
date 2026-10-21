@@ -1,6 +1,6 @@
 import './Habilidades.css';
 
-// Importación de certificados
+// Importación de certificados Cisco
 import certIoT from '../../assets/certificados/iot.png';
 import certCiberseguridad from '../../assets/certificados/ciberseguridad.png';
 import certRedes from '../../assets/certificados/redes.png';
@@ -8,10 +8,48 @@ import certHardware from '../../assets/certificados/hardware.png';
 import certDataScience from '../../assets/certificados/ciencia_datos.png';
 import certPython from '../../assets/certificados/python.png';
 
+// Importación de certificados Oracle Academy
+import certJavaFund from '../../assets/certificados/java_fundamentals.jpeg';
+import certJavaFound from '../../assets/certificados/java_foundations.jpeg';
+import certDbDesign from '../../assets/certificados/database_design.jpeg';
+import certSqlProg from '../../assets/certificados/sql_programming.jpeg';
+
 const Habilidades = () => {
   const skillsData = [
     {
       id: 1,
+      titulo: "Java Fundamentals",
+      institucion: "Oracle Academy",
+      descripcion: "Fundamentos avanzados de programación Java, estructuras de datos, lógica orientada a objetos y desarrollo de aplicaciones.",
+      fecha: "19 Oct 2026",
+      certificadoImg: certJavaFund
+    },
+    {
+      id: 2,
+      titulo: "Java Foundations",
+      institucion: "Oracle Academy",
+      descripcion: "Conceptos fundamentales del lenguaje Java, sintaxis, control de flujo, métodos y bases del desarrollo de software.",
+      fecha: "14 Oct 2026",
+      certificadoImg: certJavaFound
+    },
+    {
+      id: 3,
+      titulo: "Database Programming with SQL",
+      institucion: "Oracle Academy",
+      descripcion: "Programación de bases de datos, consultas complejas, manipulación de datos (DML/DDL) y optimización en SQL.",
+      fecha: "14 Oct 2026",
+      certificadoImg: certSqlProg
+    },
+    {
+      id: 4,
+      titulo: "Database Design",
+      institucion: "Oracle Academy",
+      descripcion: "Diseño y modelado de bases de datos relacionales, diagramación entidad-relación y normalización de datos.",
+      fecha: "14 Oct 2026",
+      certificadoImg: certDbDesign
+    },
+    {
+      id: 5,
       titulo: "Fundamentos de Python 1",
       institucion: "Cisco Networking Academy / SENATI",
       descripcion: "Sintaxis básica, estructuras de control, funciones y fundamentos de programación orientada a objetos en Python.",
@@ -19,7 +57,7 @@ const Habilidades = () => {
       certificadoImg: certPython
     },
     {
-      id: 2,
+      id: 6,
       titulo: "Introducción a la Ciencia de Datos",
       institucion: "Cisco Networking Academy / SENATI",
       descripcion: "Conceptos clave del análisis de datos, ciclo de vida del dato y herramientas fundamentales de Data Science.",
@@ -27,7 +65,7 @@ const Habilidades = () => {
       certificadoImg: certDataScience
     },
     {
-      id: 3,
+      id: 7,
       titulo: "Conceptos Básicos de Hardware de Computadora",
       institucion: "Cisco Networking Academy / SENATI",
       descripcion: "Arquitectura interna de computadoras, componentes de hardware, mantenimiento básico y diagnóstico de fallas.",
@@ -35,7 +73,7 @@ const Habilidades = () => {
       certificadoImg: certHardware
     },
     {
-      id: 4,
+      id: 8,
       titulo: "Conceptos Básicos de Redes",
       institucion: "Cisco Networking Academy / SENATI",
       descripcion: "Fundamentos de redes de comunicación, modelo OSI/TCP-IP, direccionamiento IP y protocolos esenciales.",
@@ -43,7 +81,7 @@ const Habilidades = () => {
       certificadoImg: certRedes
     },
     {
-      id: 5,
+      id: 9,
       titulo: "Introducción a Ciberseguridad",
       institucion: "Cisco Networking Academy / SENATI",
       descripcion: "Principios de protección de datos, amenazas comunes en la red y mejores prácticas de seguridad digital.",
@@ -51,7 +89,7 @@ const Habilidades = () => {
       certificadoImg: certCiberseguridad
     },
     {
-      id: 6,
+      id: 10,
       titulo: "Introducción al IoT y Transformación Digital",
       institucion: "Cisco Networking Academy / SENATI",
       descripcion: "Conectividad de dispositivos inteligentes, automatización e impacto del Internet de las Cosas en la industria.",
@@ -64,7 +102,7 @@ const Habilidades = () => {
     <section id="tech-stack" className="habilidades-section">
       <div className="habilidades-container">
         <h2 className="section-title text-center text-white mb-2">Mis Certificaciones</h2>
-        <p className="text-center text-cyan mb-5">Emitidas por Cisco Networking Academy & SENATI</p>
+        <p className="text-center text-cyan mb-5">Emitidas por Oracle Academy, Cisco Networking Academy & SENATI</p>
         
         <div className="habilidades-grid">
           {skillsData.map((skill) => (
