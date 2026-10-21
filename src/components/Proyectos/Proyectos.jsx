@@ -7,35 +7,17 @@ const Proyectos = () => {
       imagen: "https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&w=600&q=80",
       titulo: "Sistema IoT de Control de Acceso e Iluminación",
       descripcion: "Sistema automatizado con Arduino Uno, sensor TMP36, LDR, PIR y servomotor para la gestión inteligente de estacionamientos y alertas térmicas.",
-      tecnologias: ["Arduino", "C++", "Sensores IoT", "Tinkercad", "LCD I2C"]
+      tecnologias: ["Arduino", "C++", "Sensores IoT", "Tinkercad", "LCD I2C"],
+      linkTinkercad: "https://www.tinkercad.com/things/8UBEnAFoxPx/editel?returnTo=%2Fdashboard&sharecode=n3VLQxC1nXoCJtrQZsWtbifkNBEc-MWr9bZqW4tXLWg"
     },
     {
       id: 2,
-      imagen: "https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?auto=format&fit=crop&w=600&q=80",
-      titulo: "Sistema de Gestión de Calidad Alimenticia",
-      descripcion: "Plataforma para el registro y supervisión de comedores, zonas, áreas, tipos de evaluación, calificaciones y control de medidas correctivas.",
-      tecnologias: ["SQL Server", "C#", "ASP.NET", "Base de Datos Relacional"]
-    },
-    {
-      id: 3,
-      imagen: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80",
-      titulo: "Sistema de Control Vehicular",
-      descripcion: "Aplicación para gestionar registros de vehículos, conductores, control de ingresos/salidas, mantenimientos y administración de usuarios.",
-      tecnologias: ["C#", ".NET", "SQL Server", "Visual Studio"]
-    },
-    {
-      id: 4,
-      imagen: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80",
-      titulo: "Sistema Web de Carta Digital y Comandas",
-      descripcion: "Aplicación web para visualizar menús organizados por categorías, gestión de carrito de compras, generación de pedidos únicos y control de estados.",
-      tecnologias: ["ASP.NET Core", "HTML5", "CSS3", "JavaScript", "SQL Server"]
-    },
-    {
-      id: 5,
-      imagen: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=600&q=80",
-      titulo: "Reproductor de Música Web Dinámico",
-      descripcion: "Reproductor web interactivo que carga aleatoriamente pistas musicales desde el servidor con controles de reproducción, pausa, salto y bucle continuo.",
-      tecnologias: ["JavaScript", "HTML5", "CSS3", "IIS"]
+      imagen: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=600&q=80",
+      titulo: "EcoTrack App - Gestión de Residuos",
+      descripcion: "Aplicación móvil orientada al monitoreo y gestión inteligente de residuos sólidos e impacto ambiental para soluciones ecológicas sostenibles.",
+      tecnologias: ["React", "JavaScript", "Mobile App", "Node.js"],
+      linkGithub: "https://github.com/jeremyylasaca40-a11y/EcoTrack2",
+      linkApp: "#" // Aquí puedes cambiar el '#' por el enlace real de tu app si ya la tienes desplegada (ej. en Vercel)
     }
   ];
 
@@ -57,6 +39,71 @@ const Proyectos = () => {
                     <span key={index} className="tech-tag">{tech}</span>
                   ))}
                 </div>
+
+                {/* Botones de evidencia condicionales según el proyecto */}
+                <div className="proyecto-links mt-4" style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+                  {proyecto.linkTinkercad && (
+                    <a 
+                      href={proyecto.linkTinkercad} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="btn-proyecto"
+                      style={{
+                        background: '#64dfdf',
+                        color: '#0b132b',
+                        padding: '0.5rem 1rem',
+                        borderRadius: '6px',
+                        textDecoration: 'none',
+                        fontWeight: '600',
+                        fontSize: '0.85rem'
+                      }}
+                    >
+                      Ver en Tinkercad
+                    </a>
+                  )}
+
+                  {proyecto.linkGithub && (
+                    <a 
+                      href={proyecto.linkGithub} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="btn-proyecto"
+                      style={{
+                        background: 'transparent',
+                        color: '#64dfdf',
+                        border: '1px solid #64dfdf',
+                        padding: '0.5rem 1rem',
+                        borderRadius: '6px',
+                        textDecoration: 'none',
+                        fontWeight: '600',
+                        fontSize: '0.85rem'
+                      }}
+                    >
+                      Repositorio GitHub
+                    </a>
+                  )}
+
+                  {proyecto.linkApp && (
+                    <a 
+                      href={proyecto.linkApp} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="btn-proyecto"
+                      style={{
+                        background: '#64dfdf',
+                        color: '#0b132b',
+                        padding: '0.5rem 1rem',
+                        borderRadius: '6px',
+                        textDecoration: 'none',
+                        fontWeight: '600',
+                        fontSize: '0.85rem'
+                      }}
+                    >
+                      Ver Aplicación
+                    </a>
+                  )}
+                </div>
+
               </div>
             </article>
           ))}
