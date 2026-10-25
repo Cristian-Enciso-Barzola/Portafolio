@@ -1,23 +1,53 @@
 import './Proyectos.css';
 
+// Importación de imágenes locales para los circuitos de Tinkercad
+import imgCircuitoParking from '../../assets/tinkercad_circuito.png';
+import imgCircuitoServidores from '../../assets/servidores_circuito.png';
+
 const Proyectos = () => {
   const proyectosData = [
     {
       id: 1,
-      imagen: "https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&w=600&q=80",
       titulo: "Sistema IoT de Control de Acceso e Iluminación",
       descripcion: "Sistema automatizado con Arduino Uno, sensor TMP36, LDR, PIR y servomotor para la gestión inteligente de estacionamientos y alertas térmicas.",
       tecnologias: ["Arduino", "C++", "Sensores IoT", "Tinkercad", "LCD I2C"],
-      linkTinkercad: "https://www.tinkercad.com/things/8UBEnAFoxPx/editel?returnTo=%2Fdashboard&sharecode=n3VLQxC1nXoCJtrQZsWtbifkNBEc-MWr9bZqW4tXLWg"
+      imagen: imgCircuitoParking,
+      linkVideo: "https://youtu.be/jIEj6B1CY58" // Video de YouTube
     },
     {
       id: 2,
-      imagen: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=600&q=80",
       titulo: "EcoTrack App - Gestión de Residuos",
-      descripcion: "Aplicación móvil orientada al monitoreo y gestión inteligente de residuos sólidos e impacto ambiental para soluciones ecológicas sostenibles.",
+      descripcion: "Aplicación orientada al monitoreo y gestión inteligente de residuos sólidos e impacto ambiental para soluciones ecológicas sostenibles.",
       tecnologias: ["React", "JavaScript", "Mobile App", "Node.js"],
+      imagen: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=600&q=80",
       linkGithub: "https://github.com/jeremyylasaca40-a11y/EcoTrack2",
-      linkApp: "#" // Aquí puedes cambiar el '#' por el enlace real de tu app si ya la tienes desplegada (ej. en Vercel)
+      linkDriveApp: "https://drive.google.com/drive/folders/1FteKL7r5evHHRdPGzjGViqL5TgWRjlPg?usp=drive_link" // Enlace de Google Drive
+    },
+    {
+      id: 3,
+      titulo: "Control de Temperatura en Sala de Servidores",
+      descripcion: "Sistema IoT desarrollado en Tinkercad con Arduino Uno, sensor TMP36, pantalla LCD 16x2, servomotor para compuerta de ventilación y buzzer de alerta.",
+      tecnologias: ["Arduino", "C++", "Tinkercad", "Sensores IoT", "LCD 16x2"],
+      imagen: imgCircuitoServidores,
+      linkVideo: "https://drive.google.com/drive/folders/18pmYDI6JxLTJYC8IhRwUYLfCUcC1tIc0?usp=drive_link" // Pega aquí tu enlace del MP4 en Drive
+    },
+    {
+      id: 4,
+      titulo: "AppTareas - Gestor y Organizador de Tareas",
+      descripcion: "Aplicación orientada a la administración eficiente de tareas diarias, control de pendientes y organización de productividad personal.",
+      tecnologias: ["React", "JavaScript", "Mobile App", "CSS"],
+      imagen: "https://images.unsplash.com/photo-1540350394557-8d14678e7f91?auto=format&fit=crop&w=600&q=80",
+      linkGithub: "https://github.com/jeremyylasaca40-a11y/AppTareas",
+      linkDriveApp: "https://drive.google.com/drive/folders/1FteKL7r5evHHRdPGzjGViqL5TgWRjlPg?usp=drive_link" // Enlace de Google Drive proporcionado
+    },
+    {
+      id: 5,
+      titulo: "ECOLIM - Plataforma Web de Reciclaje",
+      descripcion: "Proyecto grupal integrador (Full Stack Developer) que promueve la separación de residuos, catálogo interactivo de materiales y calculadora de impacto ambiental.",
+      tecnologias: ["React", "Vite", "JavaScript", "CSS", "Git Workflow"],
+      imagen: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=600&q=80",
+      linkGithub: "https://github.com/jeremyylasaca40-a11y/web_reciclaje",
+      linkApp: "https://web-reciclaje.vercel.app/" // Enlace oficial de Vercel
     }
   ];
 
@@ -40,11 +70,11 @@ const Proyectos = () => {
                   ))}
                 </div>
 
-                {/* Botones de evidencia condicionales según el proyecto */}
+                {/* Botones de evidencias dinámicos */}
                 <div className="proyecto-links mt-4" style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-                  {proyecto.linkTinkercad && (
+                  {proyecto.linkVideo && (
                     <a 
-                      href={proyecto.linkTinkercad} 
+                      href={proyecto.linkVideo} 
                       target="_blank" 
                       rel="noopener noreferrer" 
                       className="btn-proyecto"
@@ -58,7 +88,7 @@ const Proyectos = () => {
                         fontSize: '0.85rem'
                       }}
                     >
-                      Ver en Tinkercad
+                      Ver Simulación / Video
                     </a>
                   )}
 
@@ -83,6 +113,26 @@ const Proyectos = () => {
                     </a>
                   )}
 
+                  {proyecto.linkDriveApp && (
+                    <a 
+                      href={proyecto.linkDriveApp} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="btn-proyecto"
+                      style={{
+                        background: '#64dfdf',
+                        color: '#0b132b',
+                        padding: '0.5rem 1rem',
+                        borderRadius: '6px',
+                        textDecoration: 'none',
+                        fontWeight: '600',
+                        fontSize: '0.85rem'
+                      }}
+                    >
+                      Probar App (Drive)
+                    </a>
+                  )}
+
                   {proyecto.linkApp && (
                     <a 
                       href={proyecto.linkApp} 
@@ -99,7 +149,7 @@ const Proyectos = () => {
                         fontSize: '0.85rem'
                       }}
                     >
-                      Ver Aplicación
+                      Ver Aplicación Web (Vercel)
                     </a>
                   )}
                 </div>
